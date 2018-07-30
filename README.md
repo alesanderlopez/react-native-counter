@@ -29,6 +29,22 @@ import Counter from 'react-native-counter';
 />
 ```
 
+# Reset from parent view
+
+```javascript
+import Counter from 'react-native-counter';
+
+<Counter
+ ...
+ ref={counter => this.counter = counter}
+/>
+
+  // Example method restarting the counter
+  resetCounter() {
+    this.counter.reset();
+  }
+```
+
 The easing prop is a string corresponding to one of any function from [eases](https://github.com/mattdesl/eases).
 
 # License
